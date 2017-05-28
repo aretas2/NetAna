@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="518.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <top>
+      <VBox prefHeight="261.0" prefWidth="666.0" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem fx:id="btn9" mnemonicParsing="false" onAction="#MenuItem9Action" text="Save Network to a File" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="About">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Action 1" />
+                    </items>
+                  </Menu>
+              </menus>
+            </MenuBar>
+            <HBox>
+               <children>
+                  <Button fx:id="btn1" mnemonicParsing="false" onAction="#Button1Action" text="Create a Network">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btn6" layoutX="20.0" layoutY="20.0" mnemonicParsing="false" onAction="#Button6Action" text="Clear Network">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Total Nodes: ">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Label fx:id="txt2" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Total Edges: ">
+                     <HBox.margin>
+                        <Insets left="25.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Label fx:id="txt3" />
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Button fx:id="btn2" mnemonicParsing="false" onAction="#Button2Action" text="Add Interaction">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btn10" mnemonicParsing="false" onAction="#Button10Action" prefHeight="27.0" prefWidth="147.0" text="Remove Interaction">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <TextField fx:id="txtField1" prefHeight="27.0" prefWidth="139.0" promptText="Name of Node">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField fx:id="txtField2" prefHeight="27.0" prefWidth="139.0" promptText="Name of Node">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox>
+               <children>
+                  <Button fx:id="btn5" mnemonicParsing="false" onAction="#Button5Action" text="Find Degree">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <TextField fx:id="txtField5" promptText="Enter Node name">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField fx:id="txtField6" promptText="Degree appears here">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Button fx:id="btn3" mnemonicParsing="false" onAction="#Button3Action" text="Average Degree">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <TextField fx:id="txtField3">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Button fx:id="btn4" mnemonicParsing="false" onAction="#Button4Action" text="Find Hub">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <TextField fx:id="txtField4" prefHeight="27.0" prefWidth="494.0" promptText="Degree and name is printed out here">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="86.0" prefWidth="600.0">
+               <children>
+                  <Button fx:id="btn7" mnemonicParsing="false" onAction="#Button7Action" text="Degree Distribution">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btn8" mnemonicParsing="false" onAction="#Button8Action" text="Save">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <bottom>
+      <HBox prefHeight="28.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="txt1" prefHeight="17.0" prefWidth="474.0">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <ListView fx:id="listview" prefHeight="229.0" prefWidth="325.0" BorderPane.alignment="CENTER" />
+   </center>
+   <right>
+      <ListView fx:id="listview_dis" prefHeight="229.0" prefWidth="306.0" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>
